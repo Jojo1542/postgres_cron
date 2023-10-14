@@ -1,19 +1,19 @@
 # postgres_cron
-Dockerfile for building postgresql:15.1 with pg_cron extension
+Dockerfile for building postgresql:15 with pg_cron extension
 
-This image is derived from official [postgres:15.1](https://hub.docker.com/_/postgres) docker image and heavily inspired by [spitzenidee/postgresql_base](https://github.com/spitzenidee/postgresql_base).
+This image is derived from official [postgres:15](https://hub.docker.com/_/postgres) docker image and heavily inspired by [spitzenidee/postgresql_base](https://github.com/spitzenidee/postgresql_base).
 
 Dockerfile installs [CitusData pg_cron extension installed](https://github.com/citusdata/pg_cron) for `postgres` database.
 
 To change the database for `pg_cron` to be installed, give a value to `PG_CRON_DB` environment variable. It defaults to `pg_cron`.
 
-`Dockerfile` and `docker-entrypoint.sh` files reside in [https://github.com/ramazanpolat/postgres_cron](https://github.com/ramazanpolat/postgres_cron)
+`Dockerfile` and `docker-entrypoint.sh` files reside in [https://github.com/ramazanpolat/jojo1542](https://github.com/ramazanpolat/jojo1542)
 
 
 # Building image
 
 ```sh
-$ git clone https://github.com/ramazanpolat/postgres_cron.git
+$ git clone https://github.com/jojo1542/postgres_cron.git
 $ cd postgres_cron
 $ docker build -t postgres_cron:15 .
 ```
@@ -21,7 +21,7 @@ $ docker build -t postgres_cron:15 .
 # Running image
 
 ```sh
-$ docker run -d ramazanpolat/postgres_cron:15
+$ docker run -d jojo1542/postgres_cron:15
 ```
 
 # Testing pg_cron
